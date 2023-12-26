@@ -45,7 +45,7 @@ public class DefaultSitemapProvider implements SitemapProvider {
 
 	@Override
 	public Sitemap getSitemap(String sitemapName) {
-		if(sitemapName.equals(SITEMAP_NAME)) {
+		if(SITEMAP_NAME.equals(sitemapName)) {
 			SitemapImpl sitemap = (SitemapImpl) SitemapFactory.eINSTANCE.createSitemap();
 			FrameImpl mainFrame = (FrameImpl) SitemapFactory.eINSTANCE.createFrame();
 
