@@ -169,7 +169,7 @@ public class CertificateGenerator implements BundleActivator {
             logger.debug("Keys generated in {} ms.", (System.currentTimeMillis() - startTime));
 
             X500Name issuerDN = new X500Name(X500_NAME);
-            Integer randomNumber = new Random().nextInt();
+            Integer randomNumber = new SecureRandom().nextInt();
             BigInteger serialNumber = BigInteger.valueOf(randomNumber >= 0 ? randomNumber : randomNumber * -1);
             Date notBefore = new Date(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 30);
             Date notAfter = new Date(System.currentTimeMillis() + (1000L * 60 * 60 * 24 * 365 * 10));
