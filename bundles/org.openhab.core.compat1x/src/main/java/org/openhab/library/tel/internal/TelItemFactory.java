@@ -28,7 +28,7 @@ public class TelItemFactory implements org.eclipse.smarthome.core.items.ItemFact
 	 * @{inheritDoc}
 	 */
 	public GenericItem createItem(String itemTypeName, String itemName) {
-		if (itemTypeName.equals(ITEM_TYPE))
+		if (ITEM_TYPE.equals(itemTypeName))
 			return new ESHCallItem(itemName);
 		else {
 			return null;
